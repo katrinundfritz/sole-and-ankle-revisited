@@ -56,8 +56,8 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
 
   @media ${QUERIES.tabletAndSmaller} {
     border-top: 4px solid ${COLORS.gray[900]};
@@ -124,7 +124,7 @@ const NavLink = styled.a`
   font-weight: ${WEIGHTS.medium};
 
   &:not(:last-of-type) {
-    margin-right: 48px;
+    margin-right: clamp(1rem, 6vw - 2.5rem, 3rem);
   }
 
   &:first-of-type {
