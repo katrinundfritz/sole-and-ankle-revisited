@@ -28,8 +28,8 @@ const Header = () => {
             <Icon id="search" strokeWidth={2} color={COLORS.gray[900]} />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
-          <UnstyledButton>
-            <Icon id="menu" strokeWidth={2} color={COLORS.gray[900]} onClick={() => setShowMobileMenu(true)} />
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
+            <Icon id="menu" strokeWidth={2} color={COLORS.gray[900]} />
             <VisuallyHidden>Toggle menu</VisuallyHidden>
           </UnstyledButton>
         </MobileActions>
