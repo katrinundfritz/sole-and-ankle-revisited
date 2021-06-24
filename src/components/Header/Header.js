@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS, QUERIES } from '../../constants';
+import { QUERIES } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -21,15 +21,15 @@ const Header = () => {
         </LogoWrapper>
         <MobileActions>
           <ShoppingBagButton>
-            <Icon id="shopping-bag" strokeWidth={2} color={COLORS.gray[900]} />
+            <Icon id="shopping-bag" strokeWidth={2} color='var(--color-gray-900)' />
             <VisuallyHidden>Toggle card</VisuallyHidden>
           </ShoppingBagButton>
           <UnstyledButton>
-            <Icon id="search" strokeWidth={2} color={COLORS.gray[900]} />
+            <Icon id="search" strokeWidth={2} color='var(--color-gray-900)' />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton onClick={() => setShowMobileMenu(true)}>
-            <Icon id="menu" strokeWidth={2} color={COLORS.gray[900]} />
+            <Icon id="menu" strokeWidth={2} color='var(--color-gray-900)' />
             <VisuallyHidden>Toggle menu</VisuallyHidden>
           </UnstyledButton>
         </MobileActions>
@@ -56,11 +56,11 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   overflow: auto;
 
   @media ${QUERIES.tabletAndSmaller} {
-    border-top: 4px solid ${COLORS.gray[900]};
+    border-top: 4px solid var(--color-gray-900);
     align-items: center;
     justify-content: space-between;
   }
@@ -120,15 +120,15 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--color-gray-900);
+  font-weight: var(--weight-medium);
 
   &:not(:last-of-type) {
     margin-right: clamp(1rem, 6vw - 2.5rem, 3rem);
   }
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
